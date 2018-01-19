@@ -1,14 +1,19 @@
 package main
 
 import "github.com/gin-gonic/gin"
+import "net/http"
 
 func main() {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
+	router := gin.Default()
+	router.GET("/ping", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "pong",
 		})
 	})
-	r.Run() // listen and serve on 0.0.0.0:8080
-}
+	router.POST("/dinosaurs", func(c *gin.Context) {
+		name := "Success"
+		c.String(http.StatusOK, name)
+	})
 
+	router.Run(":9999") // listen and serve on 0.0.0.0:9999
+}
