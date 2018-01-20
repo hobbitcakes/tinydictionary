@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+	echo -e "Usage: $0 server:port" [iterations]
+	exit 1
+fi
+
+iterations=1
+
+if [ -z $2 ] && [ "$2" =~ ^[0-9]+$ ]; then
+	iterations=$2
+fi
+
+for i in {1..5}; do
+	curl -X POST -F "file=@/tmp/file.txt" -H "Content-Type: multipart/form-data" http://$1/dinosaurs&
+	echo "Curl Executed"
+done
