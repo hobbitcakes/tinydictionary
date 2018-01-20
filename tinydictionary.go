@@ -18,7 +18,6 @@ func main() {
 	// Simulate a file upload
 	// Example: curl -X POST -F "file=@/full/path/to/file.txt" -H "Content-Type: multipart/form-data" http://<hostname>:9999/dinosaurs
 	router.POST("/dinosaurs", func(context *gin.Context) {
-
 		// Source
 		file, err := context.FormFile("file")
 		// Verify request
