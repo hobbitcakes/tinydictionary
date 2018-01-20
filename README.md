@@ -19,3 +19,22 @@ This project uses the Gin framework
 go get github.com/gin-gonic/gin
 ```
 
+## Build the server binary
+```
+go build tinydictionary.go
+```
+
+## Run the server
+```
+./tinydictionary& 
+```
+
+## Execute a GET
+```
+curl
+```
+
+## Execute a POST
+```
+curl
+```
