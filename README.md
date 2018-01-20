@@ -31,10 +31,16 @@ go build tinydictionary.go
 
 ## Execute a GET
 ```
-curl
+curl http://server:9999/dinosaurs
 ```
 
 ## Execute a POST
+
+Create a 1 gb file
 ```
-curl
+dd if=/dev/zero of=/tmp/file.txt count=1024000 bs=1024
+```
+POST the file to the running server 
+```
+curl -X POST -F "file=@/tmp/file.txt" -H "Content-Type: multipart/form-data" http://server:9999/dinosaurs
 ```
