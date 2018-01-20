@@ -1,6 +1,6 @@
 # tinydictionary
 
-Small HTTP server that can scale and handle large load
+Small, fake RESTful server that can scale and handle large load. Primarily for load testing.
 
 ## Getting Started
 
@@ -13,4 +13,9 @@ bash install_go.sh
 
 ### Prerequisites
 
+This project uses the Gin framework
+
+```
+go get github.com/gin-gonic/gin
+```
 
