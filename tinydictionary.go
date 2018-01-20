@@ -26,7 +26,7 @@ func main() {
 			return
 		}
 
-		// Save the file uploaded to /dev/null
+		// Save the file uploaded to /dev/null !note, process saves a temp file to /tmp/ before removing it
 		// Change "/dev/null" to file.Filename to save the file to the local directory
 		if err := context.SaveUploadedFile(file, "/dev/null"); err != nil {
 			context.String(http.StatusBadRequest, fmt.Sprintf("upload file err: %s", err.Error()))
