@@ -31,7 +31,7 @@ go build tinydictionary.go
 
 ## Execute a GET
 ```
-curl http://server:9999/dinosaurs
+curl -XGET http://server:9999/version
 ```
 
 ## Execute a POST
