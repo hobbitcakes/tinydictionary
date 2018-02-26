@@ -18,7 +18,7 @@ func main() {
 	// Simulate a ping request
 	router.GET("/version", func(context *gin.Context) {
 		context.JSON(200, gin.H{
-			"message": "stegomastodon",
+			"version": "archaeopteryx",
 		})
 	})
 
